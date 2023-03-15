@@ -7,7 +7,7 @@ const mainForm = document.querySelector('.feedback-form');
 mainForm.addEventListener('input', throttle(onInputData, 500));
 mainForm.addEventListener('submit', onFormSubmit);
 
-let dataForm = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+let dataForm = JSON.parse(localStorage.getItem(KEY)) || {};
 const { email, message } = mainForm.elements;
 reloadPage();
 
